@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// int main(){
+int main(){
     // int n=3;
     // for(int i=1;i<=n;i++){
     //     for(int j=1;j<=n;j++){
@@ -74,44 +74,5 @@ using namespace std;
     //     }
     //     cout<<endl;
     // }
-    // int n=583;
-    // int digsum=0;
-    // while(n>0){
-    //     int lastdig=n%10;
-    //     n=n/10;
-    //     digsum+=lastdig;
-    // }
-    // cout<<digsum;
-//     int factorial(int n){
-//         if(n==0 || n==1) return 1;
-//         int fact=1;
-//         for(int i=1;i<=n;i++){
-//             fact*=i;
-//         }
-//         return fact;
-//     }
-//     int nCr(int n,int r){
-//         int fact_n=factorial(n);
-//         int fact_r=factorial(r);
-//         int fact_nmr =factorial(n-r);//n subtract r(n-r)
-//         return fact_n/(fact_r * fact_nmr);
-//     }
-//     int main(){
-//         cout << nCr(8, 2) ;
-//     return 0;
-// }
-int decnum(int n){
-    int ans=0;
-    int pow=1;
-    while(n>0){
-        int rem=n%2;
-        n=n/2;
-        ans+=(rem*pow);
-        pow=pow*10;
-    }
-    return ans;
-}
-int main(){
-    cout<<decnum(12);
     return 0;
 }

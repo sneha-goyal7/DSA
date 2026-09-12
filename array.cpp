@@ -1,25 +1,5 @@
 #include <iostream>
 using namespace std;
-// int binNum(int n){
-//     int ans=0;
-//     int pow=1;
-//     while(n>0){
-//         int rem=n%10;
-//         n=n/10;
-//         ans+=(rem*pow);
-//         pow=pow*2;
-//     }
-//     return ans;
-// }
-// int rev(int n){
-//     int rev=0;
-//     while(n>0){
-//         int rem=n%10;
-//         n=n/10;
-//         rev=rev*10+rem;
-//     }
-//     return rev;
-// }
 // int linear(int arr[],int size, int target){
 //     for(int i=0;i<size;i++){
 //         if(arr[i]==target){
@@ -64,8 +44,6 @@ void inter(int arr1[],int n , int arr2[], int m){
     }
 }
 int main(){
-        // cout<<binNum(1011001);
-        // cout<<rev(156);
         // int arr[]={1,5,-1,67,8,9,2,-2,0};
         // cout<<linear(arr,9,4);
         // int arr[]={1,2,3,4,5,6,7};
