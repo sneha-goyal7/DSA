@@ -22,9 +22,9 @@ using namespace std;
 //     }
 //     return student<=m;
 // }
-// int allocateBooka(vector<int>&arr,int n,int m){
+// int allocateBooks(vector<int>&arr,int n,int m){
 //     if(m>n)return -1;
-//     /////here is the last condition base case
+//     //here is the last condition base case
 //     int ans=-1;
 //     int st=0,end=0;
 //     for (int i = 0; i < n; i++) end += arr[i]; 
@@ -72,7 +72,7 @@ int main(){;
     // vector<int> arr = {12, 34, 67, 90};
     // int n = arr.size();
     // int m = 2;
-    // int result = allocateBooka(arr, n, m);
+    // int result = allocateBooks(arr, n, m);
     // cout <<result;
     vector<int>arr={1,2,8,4,9};
     cout<<getDistance(arr,5,3);
