@@ -39,7 +39,7 @@ int allocateBooka(vector<int>&arr,int n,int m){
 int main(){;
     // vector<int>arr={2,4,6,7,9,10};
     // cout<<bs(arr,7);
-     vector<int> arr = {12, 34, 67, 90};
+    vector<int> arr = {12, 34, 67, 90};
     int n = arr.size();
     int m = 2;
     int result = allocateBooka(arr, n, m);
