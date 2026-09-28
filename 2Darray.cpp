@@ -16,7 +16,7 @@ pair<int,int> ls(int matrix[][3], int rows, int cols, int key)
 }
 int main()
 {
-    int matrix[4][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9} ,{10, 11, 12}};
+    int matrix[4][3] = {{1, 2, 3},{4, 5, 6},{7, 8, 9},{10, 11, 12}};
     int rows = 4;
     int cols = 3;
     // cout << ls(matrix, rows, cols, 2) << endl;
