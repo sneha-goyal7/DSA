@@ -1,27 +1,35 @@
 #include <iostream>
 using namespace std;
-bool isArmstrong(int n) {
-    int arm = 0;
-    int org = n;
+// bool isArmstrong(int n) {
+//     int arm = 0;
+//     int org = n;
 
-    int digits = 0;
-    while (n != 0) {
-        digits++;
-        n = n / 10;
+//     int digits = 0;
+//     while (n != 0) {
+//         digits++;
+//         n = n / 10;
+//     }
+//     n = org;
+
+//     while (n != 0) {
+//         int dig = n % 10;
+//         n = n / 10;
+//         int p = 1;
+//         for (int i = 0; i < digits; i++)
+//             p = p * dig;
+//         arm += p;
+//     }
+
+//     if (arm == org) return true;
+//     else return false;
+// }
+bool isPerfect(int n) {
+    if (n <= 1) return false;
+    int sum = 0;
+    for (int i = 1; i < n; i++) {
+        if (n % i == 0) sum += i;
     }
-    n = org;
-
-    while (n != 0) {
-        int dig = n % 10;
-        n = n / 10;
-        int p = 1;
-        for (int i = 0; i < digits; i++)
-            p = p * dig;
-        arm += p;
-    }
-
-    if (arm == org) return true;
-    else return false;
+    return sum == n;
 }
 int main(){
     // int n=4;
@@ -38,11 +46,18 @@ int main(){
     //     }
     //     cout<<endl;
     // }
+    // int n;
+    // cin >> n;
+    // if (isArmstrong(n))
+    //     cout << n << " is an Armstrong number" << endl;
+    // else
+    //     cout << n << " is not an Armstrong number" << endl;
     int n;
     cin >> n;
-    if (isArmstrong(n))
-        cout << n << " is an Armstrong number" << endl;
+
+    if (isPerfect(n))
+        cout << n << " is a perfect number" << endl;
     else
-        cout << n << " is not an Armstrong number" << endl;
+        cout << n << " is not a perfect number" << endl;
     return 0;
 }
