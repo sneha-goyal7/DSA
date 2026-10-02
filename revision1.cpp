@@ -23,13 +23,22 @@ using namespace std;
 //     if (arm == org) return true;
 //     else return false;
 // }
-bool isPerfect(int n) {
-    if (n <= 1) return false;
-    int sum = 0;
-    for (int i = 1; i < n; i++) {
-        if (n % i == 0) sum += i;
+// bool isPerfect(int n) {
+//     if (n <= 1) return false;
+//     int sum = 0;
+//     for (int i = 1; i < n; i++) {
+//         if (n % i == 0) sum += i;
+//     }
+//     return sum == n;
+// }
+void primeFactors(int n) {
+    if (n > 1) cout << n;  
+    for (int i = 2; (long long)i * i <= n; i++) {
+        while (n % i == 0) {
+            n = n / i;
+            cout<<i;
+        }
     }
-    return sum == n;
 }
 int main(){
     // int n=4;
@@ -52,12 +61,15 @@ int main(){
     //     cout << n << " is an Armstrong number" << endl;
     // else
     //     cout << n << " is not an Armstrong number" << endl;
-    int n;
-    cin >> n;
+    // int n;
+    // cin >> n;
 
-    if (isPerfect(n))
-        cout << n << " is a perfect number" << endl;
-    else
-        cout << n << " is not a perfect number" << endl;
+    // if (isPerfect(n))
+    //     cout << n << " is a perfect number" << endl;
+    // else
+    //     cout << n << " is not a perfect number" << endl;
+    int n;
+    cin>>n;
+    primeFactors(n);
     return 0;
 }
