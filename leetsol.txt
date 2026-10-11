@@ -964,5 +964,43 @@ public:
     }
 };
 
-42. Sudoku solver recursion problem-
+42. count no. of inversion using merge sort problem-
 
+class Solution {
+    int merge(vector<int>& arr, int s, int mid, int e) {
+    vector<int> temp;
+    int i = s, j = mid + 1;
+    int invCount = 0;          
+    while (i <= mid && j <= e) {
+        if (arr[i] <= arr[j]) {
+            temp.push_back(arr[i++]);
+        } else {
+            temp.push_back(arr[j++]);
+            invCount += (mid - i + 1);     
+        }
+    }
+    while (i <= mid) temp.push_back(arr[i++]);
+    while (j <= e) temp.push_back(arr[j++]);
+
+    for (int k = 0; k < temp.size(); k++)
+        arr[s + k] = temp[k];
+
+    return invCount;                       
+}
+ long long mergeSort(vector<int>& arr, vector<int>& temp, int s, int e) {  
+        if (s >= e) return 0;
+        int mid = s + (e - s) / 2;
+        long long cnt = mergeSort(arr, temp, s, mid);
+        cnt += mergeSort(arr, temp, mid + 1, e);
+        cnt += merge(arr, temp, s, mid, e);
+        return cnt;
+    }
+
+public:
+    long long inversionCount(vector<int>& arr) {     
+        vector<int> temp(arr.size());            
+        return mergeSort(arr, temp, 0, (int)arr.size() - 1);
+    }
+};
+
+43. 
