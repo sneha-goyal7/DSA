@@ -964,7 +964,7 @@ public:
     }
 };
 
-42. count no. of inversion using merge sort problem-
+42. count no. of inversion using merge sort problem-3193(dp)
 
 class Solution {
     int merge(vector<int>& arr, int s, int mid, int e) {
@@ -1003,4 +1003,34 @@ public:
     }
 };
 
-43. 
+43. MINIMIZE MAX DISTANCE TO GAS STATION-774
+
+class Solution {
+public:
+ bool isPossible(vector<int>& arr, int k, long double dist) {
+        int cnt = 0;    
+        for (int i = 1; i < arr.size(); i++) {
+            long double gap = arr[i] - arr[i - 1];
+            cnt += (int)(gap / dist);     
+        return cnt <= k;
+    }
+    long double minimiseMaxDistance(vector<int> &arr, int k) {
+         long double st = 0, end = 0;
+        for (int i = 1; i < arr.size(); i++) {
+            end = max(end, (long double)(arr[i] - arr[i - 1]));  
+        }
+        while (end - st > 1e-7) {        
+            long double mid = (st + end) / 2.0;
+            if (isPossible(arr, k, mid)) {
+                end = mid;                      
+            }
+            else {
+                st = mid;        
+            }
+        }
+        return end;
+    }
+    }
+};
+
+44-
